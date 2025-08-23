@@ -1,0 +1,49 @@
+Basics of Python
+About Python
+Types of python
+Variables in Python
+Data Type
+Operators 
+Show the bigger and smaller value
+num1 = int(input("Enter the first number - "))
+num2 = int(input("Enter the Second number - "))
+num3 = int(input("Enter the Third number - "))
+
+
+
+if (num1 > num2 and num1 > num3):
+    print(f"the bigger number is {num1}")
+elif(num2 > num1 and num2 > num3):
+    print(f"the bigger number is {num2}")
+elif(num3 > num1 and num3 > num2):
+    print(f"the bigger number is {num3}")
+
+    
+
+if (num1 < num2 and num1 < num3):
+    print(f"the smaller number is {num1}")
+elif(num2 < num1 and num2 < num3):
+    print(f"the smaller number  is {num2}")
+elif(num3 < num1 and num3 < num2):
+    print(f"the smaller number  is {num3}")
+
+Create a calculator to show output
+num1 = int(input("Enter the first value - "))
+num2 = int(input("Enter the Second value - "))
+
+choice = int(input("Enter 1 for Add\nEnter 2 for Sub\nEnter 3 for div\nEnter 4 for multiply\nEnter 5 for mod\nEnter the choice : "))
+
+
+
+if(choice == 1):
+    print(f"{num1} + {num2} = {num1+num2}")
+elif(choice == 2):
+    print(f"{num1} - {num2} = {num1-num2}")
+elif(choice == 3):
+    print(f"{num1} / {num2} = {num1/num2}")
+elif(choice == 4):
+    print(f"{num1} * {num2} = {num1*num2}")
+elif(choice == 5):
+    print(f"{num1} % {num2} = {num1%num2}")
+else:
+    print("Invalid Input------ERROR-------Enter again")
