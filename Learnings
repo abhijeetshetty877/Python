@@ -47,3 +47,25 @@ elif(choice == 5):
     print(f"{num1} % {num2} = {num1%num2}")
 else:
     print("Invalid Input------ERROR-------Enter again")
+
+Grade and percent
+Student = input("Enter your name : ")
+
+English = int(input("Enter the score : "))
+Maths = int(input("Enter the score : "))
+IT = int(input("Enter the score : "))
+Chemistry = int(input("Enter the score : "))
+Biology = int(input("Enter the score : "))
+
+Total = (English+Maths+IT+Chemistry+Biology)
+percent = (Total/500*100)
+
+if(percent <= 100 and percent >=90):
+    print(f"percent is{percent} grade is Outstanding")
+elif(percent <= 90 and percent >= 80):
+    print(f"percent is{percent} grade is excellent")
+elif(percent <= 80 and percent >= 70):
+    print(f"percent is{percent} grade is Good")
+else:
+    print(f"percent is{percent} grade is poor")
+
