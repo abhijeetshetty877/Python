@@ -69,3 +69,22 @@ elif(percent <= 80 and percent >= 70):
 else:
     print(f"percent is{percent} grade is poor")
 
+Match case pprogram
+num1 = int(input("enter the value : "))
+num2 = int(input("enter the value : "))
+
+choice = int(input("Enter 1 for Add\nEnter 2 for Sub\nEnter 3 for div\nEnter 4 for multiply\nEnter 5 for mod\nEnter the choice : "))
+
+match(choice):
+    case 1:
+        print(f"{num1}+{num2} = {num1+num2}")
+    case 2:
+        print(f"{num1}-{num2} = {num1-num2}")
+    case 3:
+        print(f"{num1}*{num2} = {num1*num2}")
+    case 4:
+        print(f"{num1}/{num2} = {num1/num2}")
+    case 5:
+        print(f"{num1}%{num2} = {num1%num2}")
+    case _ :
+        print(f"out of range")
