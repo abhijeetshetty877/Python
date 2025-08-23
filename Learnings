@@ -1,9 +1,67 @@
 Basics of Python
 About Python
 Types of python
-Variables in Python
-Data Type
-Operators 
+Input and Output:
+print(): Displays output to the console.
+input(): Takes input from the user.
+--------------------------------------
+Variables and Data Types:
+Integers (int): Whole numbers (e.g., 5, -10).
+Strings (str): Sequences of characters enclosed in quotes (e.g., "hello", 'Python').
+----------------------------------------------------------
+Operators: Symbols that perform operations on values and variables. Common types include:
+Arithmetic Operators: +, -, *, /, % (modulo), ** (exponentiation).
+Comparison Operators: == (equal to), != (not equal to), <, >, <=, >=.
+Logical Operators: and, or, not. 
+--------------------------------------------
+Conditional Statements Conditional statements are used to execute different blocks of code based on certain conditions. In Python, you can use the if-else statement to check conditions and execute code accordingly.
+
+if Statement: The if statement is used to check if a condition is true or false.
+if-else Statement: The if-else statement is used to check if a condition if the condition is true then the if section will execute otherwise the esle section will execute.
+elif Statement: The elif statement is used to check multiple conditions and execute code accordingly [If else Ladder].
+Nested if Statement: The nested if statement is used to check multiple conditions and execute code accordingly.
+---------------------------------------------------------------------------------------------------------------
+num1 = int(input("Enter your age : "))
+if (num1 >= 18):
+    print("Elegible")
+else:
+    print("Not Eligible")
+----------------------------------------------------------------------------------------------------------------
+num1 = int(input("Enter your age : "))
+
+
+if(num1 > 0 and num1 <= 20):
+    print("Value is between 1 to 20")
+elif(num1 > 21 and num1 <= 50):
+    print("Value is between 21 to 50")
+elif(num1 > 51 and num1 <= 100):
+    print("Value is between 51 to 100")
+else:
+    print("Value is out of range")
+-----------------------------------------------------------------------------------------------------------------
+age = int(input("enter the age :"))
+
+sal = int(input("enter the salry :"))
+
+if (age >= 18):
+    print("your are eligible")
+    
+    if (sal >= 100000 and sal <= 150000):
+        print(f"Your salary is {sal} your are elite")
+    elif(sal >= 150000 and sal <= 200000):
+        print(f"Your salary is {sal} your are silver")
+    elif(sal >= 200000):
+        print(f"Your salary is {sal} your are gold")
+    else:
+        print(f"Your salary is {sal} your are not eligible")
+else:
+    print("You are under age")
+    
+    if sal < 100000 and sal >= 50000:
+        print(f"You are eligible for 50% access because your salary is {sal}")
+    else:
+        print("Your salary is below 1 Lakh you are not eligible")
+-----------------------------------------------------------------------------------------------------------------------------
 Show the bigger and smaller value
 num1 = int(input("Enter the first number - "))
 num2 = int(input("Enter the Second number - "))
@@ -18,8 +76,6 @@ elif(num2 > num1 and num2 > num3):
 elif(num3 > num1 and num3 > num2):
     print(f"the bigger number is {num3}")
 
-    
-
 if (num1 < num2 and num1 < num3):
     print(f"the smaller number is {num1}")
 elif(num2 < num1 and num2 < num3):
@@ -32,8 +88,6 @@ num1 = int(input("Enter the first value - "))
 num2 = int(input("Enter the Second value - "))
 
 choice = int(input("Enter 1 for Add\nEnter 2 for Sub\nEnter 3 for div\nEnter 4 for multiply\nEnter 5 for mod\nEnter the choice : "))
-
-
 
 if(choice == 1):
     print(f"{num1} + {num2} = {num1+num2}")
@@ -69,7 +123,7 @@ elif(percent <= 80 and percent >= 70):
 else:
     print(f"percent is{percent} grade is poor")
 
-Match case pprogram
+Match case program
 num1 = int(input("enter the value : "))
 num2 = int(input("enter the value : "))
 
