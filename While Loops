@@ -31,3 +31,15 @@ if sum == check:
 else:
     print("Not armstrong")
 ---------------------------------------------------------------------------------------------
+Reverse the number given by user
+num = int(input("Enter a number : "))
+
+reversednum = 0
+
+while num > 0:
+    digit = num % 10
+    reversednum = reversednum * 10 + digit
+    num //= 10
+
+print("The reversed number is:", reversednum)
+-------------------------------------------------------------------------------------------------
