@@ -126,3 +126,13 @@ if sum == check:
     print("armstrong")
 else:
     print("Not armstrong")
+
+elif Choice == 4:
+    num = int(input("enter a number : "))
+    Reversednum = 0
+
+while num > 0:
+    digit = num%10
+    Reversednum = Reversednum*10+digit
+    num //= 10
+    print(Reversednum)
