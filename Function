@@ -1,0 +1,9 @@
+def add():
+    print("Welcome to primezone computer ")
+
+Num1 = int(input("Enter a value : "))
+
+add()
+
+------------------------------------------------------------
+
