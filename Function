@@ -6,4 +6,35 @@ Num1 = int(input("Enter a value : "))
 add()
 
 ------------------------------------------------------------
+def add(a,b):
+    print(f"{a} + {b} = {a+b} ")
 
+def sub(a,b):
+    print(f"{a} - {b} = {a-b} ")
+
+def mul(a,b):
+    print(f"{a} * {b} = {a*b} ")
+
+def div(a,b):
+    print(f"{a} / {b} = {a/b} ")
+
+def mod(a,b):
+    print(f"{a} % {b} = {a%b} ")
+
+Num1 = int(input("Enter a value : "))
+Num2 = int(input("Enter a value : "))
+
+choice = int(input(" Enter 1 for + \n Enter 2 for - \n Enter 3 for * \n Enter 4 for / \n Enter 5 for % \n Enter your choice : "))
+
+if choice == 1:
+    add(Num1,Num2)
+elif choice == 2:
+    sub(Num1,Num2)
+elif choice == 3:
+    mul(Num1,Num2)
+elif choice == 4:
+    div(Num1,Num2)
+elif choice == 5:
+    mod(Num1,Num2)
+
+------------------------------------------------------------------
