@@ -102,11 +102,6 @@ def Factorial(num):
 
     print(Fact)
 def Swaping (a,b):
-num1 = int(input("Enter the value - "))
-num2 = int(input("Enter the value - "))
-
-print(f"the num1 ={num1}")
-print(f"the num2 ={num2}")
 
 num1 = num1+num2
 num2 = num1-num2
@@ -115,7 +110,6 @@ num1 = num1-num2
 
 print(f"the num1 ={num1}")
 print(f"the num2 ={num2}")
-
 
 def Fibonacci(n):
     n1, n2 = 0, 1
@@ -158,8 +152,9 @@ elif choice==5:
     Factorial(num)
 
 elif choice==6:
-    num = int(input("enter a number : "))
-    Swaping(num)
+    num1 = int(input("Enter the value - "))
+    num2 = int(input("Enter the value - "))
+    Swaping(num1,num2)
     
 elif choice==7:
     n = int(input("enter a number : "))
