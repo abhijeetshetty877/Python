@@ -101,7 +101,20 @@ def Factorial(num):
         Fact *= i
 
     print(Fact)
+def Swaping (a,b):
+num1 = int(input("Enter the value - "))
+num2 = int(input("Enter the value - "))
 
+print(f"the num1 ={num1}")
+print(f"the num2 ={num2}")
+
+num1 = num1+num2
+num2 = num1-num2
+num1 = num1-num2 
+
+
+print(f"the num1 ={num1}")
+print(f"the num2 ={num2}")
 
 
 def Fibonacci(n):
