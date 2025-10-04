@@ -35,3 +35,36 @@ mylist.sort()
 
 print(mylist)
 --------------------------------------------------------------------
+fruit = []
+
+print(fruit)
+
+ran = int(input("enter the range : "))
+
+for i in range(ran):
+    value = input(f"Enter the value at {i+1}: ")
+    fruit.append(value)
+
+print(fruit)
+
+fruit.insert(1, "orange")
+print(fruit)
+
+remo = input("Enter the value to remove : ")
+
+fruit.remove(remo)
+print(fruit)
+fruit.pop()
+print(fruit)
+fruit.pop(1)
+print(fruit)
+del fruit[0]
+print(fruit)
+fruit.clear()
+print(fruit)
+mylist = fruit.copy()
+
+print(mylist)
+del fruit
+print(fruit)
+---------------------------------------------------------------------------------------
