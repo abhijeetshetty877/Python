@@ -35,6 +35,14 @@ mylist.sort()
 
 print(mylist)
 --------------------------------------------------------------------
+
+fruit = ["apple", "banana", "cherry"]
+
+index = int(input("Enter the value : "))-1
+value = input("Enter the value : ")
+fruit[index] = value
+print(fruit)
+----------------------------------------------------------------------
 fruit = []
 
 print(fruit)
