@@ -25,3 +25,13 @@ thislist.sort()
 
 print(thislist)
 ----------------------------------------------------------------------
+userinput = input("Enter elements separated by spaces: ")
+mylist = userinput.split()
+
+print(mylist)
+print(mylist[2])
+
+mylist.sort()
+
+print(mylist)
+--------------------------------------------------------------------
