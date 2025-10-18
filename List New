@@ -32,3 +32,31 @@ print(fruit)
 add = input("Add fruit name : ")
 fruit.append(add)
 print(fruit)
+
+-------------------------------------------------------------------------------------------------
+
+List = []
+print(List)
+
+Ran = int(input("Enter a range: "))
+
+for i in range(Ran):
+    Value = int(input(f"Enter a value {i+1}: "))
+    List.append(Value)
+
+print(List)
+even = []
+odd = []
+
+for i in List:
+    if i % 2 == 0:
+        even.append(i)
+    else:
+        odd.append(i)
+        
+print(List)
+
+choice = int(input("Enter value to Search : "))
+
+if choice in List:
+    print("Yes, the person is present in the database")
