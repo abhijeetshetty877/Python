@@ -1,0 +1,57 @@
+Tuple and List coversion
+Fruit = ()
+print("Tuple : ",Fruit)
+
+hello = list(Fruit)
+print(hello)
+
+Ran = int(input("Enter a range: "))
+
+for i in range(Ran):
+    Value = input(f"Enter a value {i+1}: ")
+    hello.append(Value)
+
+print(hello)
+
+fruit = tuple(hello)
+print(fruit)
+
+hello = list(fruit)
+print(hello)
+
+add1 = input("Add fruit name  : ")
+hello.append(add1)
+print(hello)
+
+fruit = tuple(hello)
+print(fruit)
+
+hello = list(fruit)
+print(hello)
+
+remo = input("Add name to delete: ")
+hello.remove(remo)
+print(hello)
+
+fruit = tuple(hello)
+print(fruit)
+
+hello = list(fruit)
+print(hello)
+
+del hello[0]
+print(hello)
+
+fruit = tuple(hello)
+print(fruit)
+
+hello = list(fruit)
+print(hello)
+
+print(len(hello))
+
+hello.clear()
+print(hello)
+
+fruit = tuple(hello)
+print(fruit)
