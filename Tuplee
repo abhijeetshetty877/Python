@@ -1,0 +1,36 @@
+fruit=("apple","banana","orange","papaya","kiwi","mango","melon")
+
+print("Tuple : ",fruit)
+
+print("2nd : ",fruit[2])
+
+print("Last : ",fruit[-1])
+
+print("2:5 range ",fruit[2:5])
+
+print("-4 to -1 range ",fruit[-4:-1])
+
+
+for i in fruit:
+
+    if i == "orange":
+        print("value is present")
+
+
+
+print(fruit)
+print(type(fruit))
+
+print("-----------------------------")
+
+hello = list(fruit)
+
+print(hello)
+print(type(hello))
+
+hello.append("cherry")
+
+print("-----------------------------")
+
+fruit = tuple(hello)
+print(fruit)
