@@ -8,3 +8,21 @@ def fact(n):
 print("factorial of 5 is : ",fact(5))
 print("factorial of 12 is : ",fact(12))
 print("factorial of 3 is : ",fact(3))
+
+------------------------------------------------------
+def fact(n):
+    if n==0:
+        return 1;
+    else:
+        return n*fact(n-1)
+value = int(input("enter a value : "))
+        
+        
+print("factorial is : ",fact(value))
+
+value1 = int(input("enter a value1 : "))
+print("factorial is : ",fact(value1))
+
+value2 = int(input("enter a value2 : "))
+print("factorial  is : ",fact(value2))
+-----------------------------------------------------------
