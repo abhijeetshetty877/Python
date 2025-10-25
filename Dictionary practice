@@ -1,0 +1,42 @@
+mydictn= {
+    "car":"duster",
+    "model":"top model",
+    "year":[2002,2003,2004,2005,2008]
+}
+
+print(mydictn)
+print(mydictn["car"])
+
+print("-----------------")
+
+print("printing keys")
+for x in mydictn:
+    print(x) 
+    
+print("-----------------")
+
+print("printing values")
+for x in mydictn:
+    print(mydictn[x])
+print("-----------------")
+print("Edit Key & Value")
+
+key = input("Edit the key : ")
+value = input("Edit the value : ")
+
+mydictn[key] = value
+print(mydictn)
+print("-----------------")
+print("Adding New Key & Value")
+key = input("Enter the new key : ")
+value = input("Enter the new value : ")
+
+mydictn[key] = value
+print(mydictn)
+print("-----------------")
+
+print("Deleting Key & Value")
+key = input("Enter the key to delete : ")
+del mydictn[key]
+
+print(mydictn)
