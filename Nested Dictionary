@@ -1,0 +1,9 @@
+car = { "name" : "duster", "year": 2018 }
+
+bike ={ "name":"bullet","year" : 2000}
+
+cycle={"name":"honda", "year":2020}
+
+vehicals = {"child1":car,"child2":bike,"child3":cycle}
+
+print(vehicals["child1"]["year"])
