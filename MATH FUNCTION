@@ -1,0 +1,28 @@
+user1 = int(input("enter a value = "))
+print("abs =", abs(user1))
+
+num1 = int(input("enter a value = "))
+num2 = int(input("enter a power = "))
+
+print("pow =", pow(num1, num2))
+
+print("=" * 50)
+
+num1 = float(input("enter a value in Decimal = "))
+
+print("round(num1, 2) =", round(num1,2))
+print("=" * 50)
+
+
+num1 = int(input("enter 1st value = "))
+num2 = int(input("enter 2nd value = "))
+num3 = int(input("enter 3rd value = "))
+num4 = int(input("enter 4th value = "))
+list = (num1, num2, num3, num4)
+print(list)
+print("min =", min(num1, num2, num3, num4))
+print("max =", max(num1, num2, num3, num4))
+print("sum =", sum([num1, num2, num3, num4]))
+print("=" * 50)
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
