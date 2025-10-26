@@ -1,0 +1,96 @@
+import math
+import cmath
+import random
+import statistics as stats
+import numpy as np
+
+print("=" * 60)
+print("🧮 BUILT-IN MATH FUNCTIONS")
+print("=" * 60)
+
+print("abs(-5) =", abs(-5))
+print("pow(2, 3) =", pow(2, 3))
+print("round(3.14159, 2) =", round(3.74159))
+print("min(2, 5, 1, 9) =", min(2, 5, 1, 9))
+print("max(2, 5, 1, 9) =", max(2, 5, 1, 9))
+print("sum([1,2,3,4]) =", sum([1, 2, 3, 4]))
+
+print("\n" + "=" * 60)
+print("📐 MATH MODULE")
+print("=" * 60)
+
+print("math.pi =", math.pi)
+print("math.e =", math.e)
+print("math.sqrt(16) =", math.sqrt(16))
+print("math.factorial(5) =", math.factorial(5))
+print("math.exp(2) =", math.exp(2))
+print("math.log(8, 2) =", math.log(8, 2))
+print("math.log10(100) =", math.log10(100))
+print("math.sin(math.pi/2) =", math.sin(math.pi/2))
+print("math.cos(0) =", math.cos(0))
+print("math.tan(math.pi/4) =", math.tan(math.pi/4))
+print("math.degrees(math.pi) =", math.degrees(math.pi))
+print("math.radians(180) =", math.radians(180))
+print("math.ceil(4.2) =", math.ceil(4.2))
+print("math.floor(4.8) =", math.floor(4.8))
+print("math.trunc(4.8) =", math.trunc(4.8))
+print("math.hypot(3, 4) =", math.hypot(3, 4))
+
+print("\n" + "=" * 60)
+print("⚙️ CMATH (COMPLEX MATH)")
+print("=" * 60)
+
+z = 3 + 4j
+print("Complex number z =", z)
+print("cmath.phase(z) =", cmath.phase(z))
+print("abs(z) =", abs(z))
+print("cmath.polar(z) =", cmath.polar(z))
+print("cmath.rect(5, math.pi) =", cmath.rect(5, math.pi))
+
+print("\n" + "=" * 60)
+print("🎲 RANDOM MODULE")
+print("=" * 60)
+
+print("random.random() =", random.random()*10)
+print("random.randint(1, 10) =", random.randint(1, 100))
+print("random.uniform(1, 5) =", random.uniform(1, 5))
+print("random.choice(['apple','banana','cherry']) =", random.choice(['apple', 'banana', 'cherry']))
+
+fruits = ['apple', 'banana', 'cherry']
+random.shuffle(fruits)
+print("random.shuffle(fruits) =", fruits)
+print("random.sample(range(100), 5) =", random.sample(range(100), 5))
+
+print("\n" + "=" * 60)
+print("📊 STATISTICS MODULE")
+print("=" * 60)
+
+data = [1, 2, 3,3,3,3,3,3, 5, 5, 5]
+print("Data =", data)
+print("Mean =", stats.mean(data))
+print("Median =", stats.median(data))
+print("Mode =", stats.mode(data))
+print("Variance =", stats.variance(data))
+print("Standard Deviation =", stats.stdev(data))
+
+print("\n" + "=" * 60)
+print("🧠 NUMPY (ADVANCED MATH)")
+print("=" * 60)
+
+arr = np.array([1, 2, 3, 4])
+print("Array =", arr)
+print("np.sqrt(arr) =", np.sqrt(arr))
+print("np.exp(arr) =", np.exp(arr))
+print("np.log(arr) =", np.log(arr))
+print("np.sin(np.pi/2) =", np.sin(np.pi/2))
+print("Mean =", np.mean(arr))
+print("Std Dev =", np.std(arr))
+print("Variance =", np.var(arr))
+
+A = np.array([[1, 2], [3, 4]])
+B = np.array([[2, 0], [1, 3]])
+print("Matrix A =\n", A)
+print("Matrix B =\n", B)
+print("np.dot(A, B) =\n", np.dot(A, B))
+
+print("\n✅ ALL MATH FUNCTIONS DEMO COMPLETE ✅")
