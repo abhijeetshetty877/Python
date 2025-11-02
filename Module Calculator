@@ -21,3 +21,41 @@ num2 = int(input("Enter the value : "))
 ab.Calculator(num1, num2)
 
 ---------------------------------------------------------------------
+Mymodules
+def add(n1,n2):
+    return n1+n2
+
+def sub(n1,n2):
+    return n1-n2
+
+def mul(n1,n2):
+    return n1*n2
+
+def mod(n1,n2):
+    return n1%n2
+
+def div(n1,n2):
+    return n1/n2
+....................................................
+import Mymodules as ds
+
+num1 = int(input("Enter the value : "))
+
+num2 = int(input("Enter the value : "))
+
+choice = int(input("Enter 1 for +\nEnter 2 for - \nEnter 3 for * \nEnter 4 for % \nEnter 5 for / \nEnter the choice : "))
+
+if choice == 1:
+    print(ds.add(num1,num2))
+elif choice == 2:
+    print(ds.sub(num1,num2))
+elif choice == 3:
+    print(ds.mul(num1,num2))
+elif choice == 4:
+    print(ds.mod(num1,num2))
+elif choice == 5:
+    print(ds.div(num1,num2))
+else:
+    print("Value out of range")
+
+--------------------------------------------------------------------
