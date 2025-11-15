@@ -1,0 +1,106 @@
+# -----------------------------------------
+# 1. Unordered & unique elements
+# -----------------------------------------
+print("1. Unordered & Unique Elements")
+s = {1, 2, 2, 3, 3, 3}
+print(s)  # duplicates removed, order not guaranteed
+print()
+
+
+# -----------------------------------------
+# 2. Mutable set (add / remove)
+# -----------------------------------------
+print("2. Mutable: Add / Remove")
+s.add(4)
+print("After add:", s)
+s.remove(1)
+print("After remove:", s)
+print()
+
+
+# -----------------------------------------
+# 3. Elements must be immutable (hashable)
+# -----------------------------------------
+print("3. Only immutable elements allowed")
+valid_set = {1, 2.5, "hello", (1, 2)}
+print("Valid set:", valid_set)
+valid_set.remove("hello")
+print("Valid set:", valid_set)
+
+# invalid example (commented because it causes error)
+# invalid_set = {[1,2], {3:4}}  # ❌ list & dict are not hashable
+print()
+
+
+# -----------------------------------------
+# 4. Fast membership testing
+# -----------------------------------------
+print("4. Fast membership testing")
+print("Is 2 in s?", 2 in s)
+print("Is 10 in s?", 10 in s)
+print("Is 10 not in s?", 10 not in s)
+print()
+
+
+# -----------------------------------------
+# 5. Mathematical set operations
+# -----------------------------------------
+print("5. Set Operations")
+a = {1, 2, 3}
+b = {3, 2, 4, 5}
+
+print("a:", a)
+print("b:", b)
+print("Union:", a | b)
+print("Intersection:", a & b)
+print("Difference (a - b):", a - b)
+print("Difference (b - a):", b - a)
+print("Symmetric Difference:", a ^ b)
+print()
+
+
+# -----------------------------------------
+# 6. Dynamic size (add / discard)
+# -----------------------------------------
+print("6. Dynamic Size")
+d = {1, 2, 3}
+print(d)
+d.add(10)
+print(d)
+value = d.discard(2)  # does not give error if missing
+print(value)
+print("After add & discard:", d)
+print()
+
+
+# -----------------------------------------
+# 7. Iterable (looping through set)
+# -----------------------------------------
+print("7. Iteration")
+for item in {10, 20, 30}:
+    print(item)
+print()
+
+
+# -----------------------------------------
+# 8. Set comprehension
+# -----------------------------------------
+print("8. Set Comprehension")
+comp = {x*x if(x % 2 == 0) else 0 for x in range(6)}
+print("Squares:", comp)
+print()
+
+
+# -----------------------------------------
+# 9. Two types: set & frozenset
+# -----------------------------------------
+print("9. Set types")
+
+normal_set = {1, 2, 3}
+frozen = frozenset([1, 2, 3])
+
+print("Normal set:", normal_set)
+print("Frozenset:", frozen)
+
+# frozen.add(4) # ❌ cannot modify frozenset
+print()
