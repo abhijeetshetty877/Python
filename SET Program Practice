@@ -1,0 +1,37 @@
+Set =set()
+
+print("SET : ", Set)
+
+Ran = int(input("enter a Range : "))
+for i in range(Ran):
+    value = int(input(f"Enter a value for Set{i+1}: "))
+    Set.add(value)
+    
+print("First set :", Set)
+
+while True:
+        
+    Choice = int(input("Enter 1 for Add\nEnter 2 for remove\nEnter 3 to search\nEnter your choice : "))
+
+    if Choice == 1:
+        Add = int(input("enter a value to add : "))
+        Set.add(Add)
+        print("After add :", Set)
+
+    elif Choice == 2:
+        Rem = int(input("enter a value to delete : "))
+        Set.remove(Rem)
+        print("After Remove :", Set)
+
+    elif Choice == 3:
+        Search = int(input("enter a value to search : "))
+        print("Is the number in Set?", Search in Set)
+        
+    else:
+        print("*******Choose correct choice******")
+
+----------------------------------------------------------------------
+    
+
+
+
