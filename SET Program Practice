@@ -31,7 +31,23 @@ while True:
         print("*******Choose correct choice******")
 
 ----------------------------------------------------------------------
-    
+   OUTPUT
+SET :  set()
+enter a Range : 3
+Enter a value for Set1: 1
+Enter a value for Set2: 2
+Enter a value for Set3: 3
+First set : {1, 2, 3}
+Enter 1 for Add
+Enter 2 for remove
+Enter 3 to search
+Enter your choice : 3
+enter a value to search : 3
+Is the number in Set? True
+Enter 1 for Add
+Enter 2 for remove
+Enter 3 to search
+Enter your choice : 
 
-
+***************************************************************************
 
