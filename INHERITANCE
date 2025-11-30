@@ -27,7 +27,7 @@ class ScientificCalculator(BasicCalculator):
 num1 = int(input("Enter first value : "))
 num2 = int(input("Enter second value : "))
 
-choice = int(input("Enter 1 for add\n Enter 2 for sub\n Enter 3 for multiply\n Enter 4 for div\n Enter the choice : "))
+choice = int(input("Enter 1 for add\n Enter 2 for sub\n Enter 3 for multiply\n Enter 4 for div\n Enter 5 for squareroot \n Enter 6 for Power \n Enter the choice : "))
 
 calc = ScientificCalculator(num1, num2)
 if choice == 1:
@@ -45,4 +45,15 @@ elif choice == 6:
     
 else:
     print("invalid choice")
-    
+-------------------------------------------------------------------------
+output
+Enter first value : 10
+Enter second value : 5
+Enter 1 for add
+ Enter 2 for sub
+ Enter 3 for multiply
+ Enter 4 for div
+ Enter 5 for squareroot 
+ Enter 6 for Power 
+ Enter the choice : 6
+Power: 100000
