@@ -1,0 +1,55 @@
+class Person:
+    def __init__(self):
+        print("-----Person Details-----")
+        self.name = input("Enter your name : ")
+        self.age = int(input("Enter your Age : "))
+    
+class BankAccount(Person):
+    def __init__(self):
+        super(). __init__()
+        print("Bank Account Details")
+        self.balance = float(input("Enter Initial Balance : "))
+        
+    def deposit(self):
+        amount = float(input("Enter amount to deposit : "))
+        self.balance += amount
+        print(f"Amount deposited {amount}. New Balance: {self.balance}")
+    
+    def withdraw(self):
+        amount = float(input("Enter amount to withdraw : "))
+        if amount > self.balance:
+            print("Insufficient balance")
+            
+        else:
+            self.balance -= amount
+            print(f"Amount withdraw {amount}. New Balance: {self.balance}")
+            
+class ATM(BankAccount):
+    def show_details(self):
+        print("Account Information")
+        print("Name :" , self.name)
+        print("Age :" , self.age)
+        print("Balance :" , self.balance)
+        
+obj = ATM()
+
+print("Choose option")
+print("1. Deposit")
+print("2. Withdraw")
+print("3. Show Details")
+
+choice = int(input("Enter option (1-3) : "))
+
+if choice == 1:
+   obj.deposit()
+elif choice == 2:
+    obj.withdraw()
+elif choice == 3:
+    obj.show_details()
+    
+else:
+    print("Invalid Choice")
+ 
+
+        
+       
