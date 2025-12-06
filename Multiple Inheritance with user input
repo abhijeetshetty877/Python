@@ -1,0 +1,122 @@
+class Account:
+    def __init__(self):
+        self.balance = 0
+
+    def deposit(self, amount):
+        amount = int(input("enter amount to deposit : "))
+        if amount <= 0:
+            print("❌ Deposit amount must be positive!")
+            return
+
+        self.balance += amount
+        print(f"✅ Deposited ₹{amount}. Current Balance: ₹{self.balance}")
+
+    def withdraw(self, amount):
+        amount = int(input("enter amount to withdraw : "))
+        if amount <= 0:
+            print("❌ Withdrawal amount must be positive!")
+            return
+
+        if amount > self.balance:
+            print("❌ Insufficient balance!")
+            return
+
+        self.balance -= amount
+        print(f"✅ Withdrawn ₹{amount}. Current Balance: ₹{self.balance}")
+
+
+class Loan:
+    def __init__(self):
+        self.loan_amount = 0
+        self.is_approved = False
+
+    def apply_loan(self, amount):
+        amount = int(input("enter amount to apply loan : "))
+        if amount < 10000:
+            print("❌ Minimum loan amount must be ₹10,000 or more!")
+            return
+        
+        self.loan_amount = amount
+        self.is_approved = True
+        self.balance += amount   # loan increases balance
+
+        print(f"✅ Loan of ₹{amount} approved and credited to your account.")
+        print(f"💰 Updated Balance: ₹{self.balance}")
+
+    def loan_status(self):
+        if self.is_approved:
+            print(f"📌 Loan Status: Approved (Amount: ₹{self.loan_amount})")
+        else:
+            print("📌 Loan Status: Not Approved")
+
+
+# ---------------------------
+# MULTIPLE INHERITANCE
+# ---------------------------
+class Customer(Account, Loan):
+    def __init__(self, Name):
+        Name = input("Enter your name : ")
+        self.name = Name
+        
+        # Call constructors of both base classes
+        Account.__init__(self)
+        Loan.__init__(self)
+
+    def customer_details(self):
+        print(f"👤 Customer Name: {self.name}")
+        print(f"💰 Balance: ₹{self.balance}")
+        print(f"🏦 Loan Approved: {self.is_approved}")
+
+
+# ---------------------------
+# TESTING
+# ---------------------------
+c = Customer("")
+
+print("\n--- Customer Details ---")
+c.customer_details()
+
+print("\n--- Banking Operations ---")
+c.deposit("")
+c.withdraw("")
+c.withdraw("")   # insufficient balance test
+
+print("\n--- Loan Operations ---")
+c.apply_loan("")   # too small (fails)
+c.apply_loan("")
+c.loan_status()
+
+print("\n--- Updated Customer Details ---")
+c.customer_details()
+
+*************************************************************
+OUTPUT
+Enter your name : Abhi
+
+--- Customer Details ---
+👤 Customer Name: Abhi
+💰 Balance: ₹0
+🏦 Loan Approved: False
+
+--- Banking Operations ---
+enter amount to deposit : 100000
+✅ Deposited ₹100000. Current Balance: ₹100000
+enter amount to withdraw : 1000000
+❌ Insufficient balance!
+enter amount to withdraw : 15000
+✅ Withdrawn ₹15000. Current Balance: ₹85000
+
+--- Loan Operations ---
+enter amount to apply loan : 1000
+❌ Minimum loan amount must be ₹10,000 or more!
+enter amount to apply loan : 15000
+✅ Loan of ₹15000 approved and credited to your account.
+💰 Updated Balance: ₹100000
+📌 Loan Status: Approved (Amount: ₹15000)
+
+--- Updated Customer Details ---
+👤 Customer Name: Abhi
+💰 Balance: ₹100000
+🏦 Loan Approved: True
+
+=== Code Execution Successful ===
