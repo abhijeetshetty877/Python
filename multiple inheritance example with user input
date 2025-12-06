@@ -1,0 +1,102 @@
+class Account:
+    def __init__(self):
+        self.balance = 0
+
+    def deposit(self, amount):
+        if amount <= 0:
+            print("❌ Deposit amount must be positive!")
+            return
+
+        self.balance += amount
+        print(f"✅ Deposited ₹{amount}. Current Balance: ₹{self.balance}")
+
+    def withdraw(self, amount):
+        if amount <= 0:
+            print("❌ Withdrawal amount must be positive!")
+            return
+
+        if amount > self.balance:
+            print("❌ Insufficient balance!")
+            return
+
+        self.balance -= amount
+        print(f"✅ Withdrawn ₹{amount}. Current Balance: ₹{self.balance}")
+
+
+class Loan:
+    def __init__(self):
+        self.loan_amount = 0
+        self.is_approved = False
+
+    def apply_loan(self, amount):
+        if amount < 10000:
+            print("❌ Minimum loan amount must be ₹10,000 or more!")
+            return
+        
+        self.loan_amount = amount
+        self.is_approved = True
+        self.balance += amount   # loan increases balance
+
+        print(f"✅ Loan of ₹{amount} approved and credited to your account.")
+        print(f"💰 Updated Balance: ₹{self.balance}")
+
+    def loan_status(self):
+        if self.is_approved:
+            print(f"📌 Loan Status: Approved (Amount: ₹{self.loan_amount})")
+        else:
+            print("📌 Loan Status: Not Approved")
+
+
+# ---------------------------
+# MULTIPLE INHERITANCE
+# ---------------------------
+class Customer(Account, Loan):
+    def __init__(self, name):
+        self.name = name
+        
+        # Call constructors of both base classes
+        Account.__init__(self)
+        Loan.__init__(self)
+
+    def customer_details(self):
+        print(f"👤 Customer Name: {self.name}")
+        print(f"💰 Balance: ₹{self.balance}")
+        print(f"🏦 Loan Approved: {self.is_approved}")
+
+
+# ---------------------------
+# TESTING
+# ---------------------------
+name = input("Enter your name : ")
+c = Customer(name)
+
+while True:
+    print("\n------ MENU ------")
+    print("1. Customer Details")
+    print("2. Deposit ")
+    print("3. Withdraw ")
+    print("4. Apply Loan")
+    print("5. Check Loan Status")
+
+    choice = input("Enter your choice: ")
+    
+    if choice == "1":
+        c.customer_details()
+    
+    elif choice == "2":
+        amount = int(input("Enter amount to deposit: "))
+        c.deposit(amount)
+    
+    elif choice == "3":
+        amount = int(input("Enter amount to withdraw: "))
+        c.withdraw(amount)
+    
+    elif choice == "4":
+        amount = int(input("Enter loan amount: "))
+        c.apply_loan(amount)
+    
+    elif choice == "5":
+        c.loan_status()
+    
+    else:
+        print("Invalid choice!")
