@@ -1,0 +1,48 @@
+class ATM:
+    def __init__(self, pin, balance):
+        self.__pin = pin        # private data
+        self.__balance = balance
+
+    def authenticate(self, entered_pin):
+        if entered_pin == self.__pin:
+            return True
+        else:
+            print("Invalid PIN")
+            return False
+
+    def check_balance(self):
+        return self.__balance
+
+    def withdraw(self, amount):
+        if amount <= self.__balance and amount > 0:
+            self.__balance -= amount
+            print(f"Please collect your cash: {amount}")
+        else:
+            print("Insufficient balance or invalid amount")
+
+    def deposit(self, amount):
+        if amount > 0:
+            self.__balance += amount
+            print(f"Amount deposited: {amount}")
+        else:
+            print("Invalid deposit amount")
+            
+pin = int(input("Enter the pin"))
+balance = int(input("Enter the balance"))
+
+
+atm = ATM(pin, balance)
+
+pin = int(input("Enter the pin for process verification: ")) 
+
+if atm.authenticate(pin):
+   
+    choice = int(input("Enter 1 for deposit amount\nEnter 2 for withdraw amount :")) 
+    if choice == 1:
+        depot = int(input("Enter the deposit amount :"))
+        atm.deposit(depot)
+        print("Current Balance:", atm.check_balance())
+    elif choice == 2:
+        withdraw = int(input("Enter the withdraw amount :"))
+        atm.withdraw(withdraw)
+        print("Current Balance:", atm.check_balance())
