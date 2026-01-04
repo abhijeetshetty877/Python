@@ -1,0 +1,26 @@
+class Employee :
+    def __init__(self,name,employeeID):
+        self._name = name
+        self._employeeID = employeeID
+        self.__salary = 0
+        
+    def set_salary(self, salary):
+        if salary > 0:
+            self.__salary = salary
+        else:
+            print("Invalid salary")
+
+    def get_salary(self):
+        return self.__salary
+        
+    def display_details(self):
+        print("Name:", self._name)
+        print("Employee ID:", self._employeeID)
+        print("salary:", self.__salary)
+        
+name = input("Enter the name: ")
+employeeID = int(input("Enter the employeeID: "))
+
+emp = Employee(name, employeeID)
+emp.set_salary(50000)
+emp.display_details()
