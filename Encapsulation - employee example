@@ -20,7 +20,16 @@ class Employee :
         
 name = input("Enter the name: ")
 employeeID = int(input("Enter the employeeID: "))
+salary = int(input("Enter your salary: "))
 
 emp = Employee(name, employeeID)
-emp.set_salary(50000)
+emp.set_salary(salary)
 emp.display_details()
+
+******************************************************************
+Enter the name: Abhi
+Enter the employeeID: 123654
+Enter your salary: 50000
+Name: Abhi
+Employee ID: 123654
+salary: 50000
