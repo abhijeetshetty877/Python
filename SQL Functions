@@ -1,0 +1,171 @@
+CREATE TABLE DEMO(NAME VARCHAR(10), AGE INT, SALARY INT);
+
+INSERT INTO DEMO VALUES ('ABHI', 21, 4242314),('DRISHA', 31, 424);
+
+
+
+SELECT * FROM DEMO;
+SELECT NAME, SALARY FROM DEMO;
+
+
+/*
+
+Create a table name Student with columns like 
+{
+name, age, rollno, class, div, gender, engmarks, scimarks, hindimarks, marathimarks, mathmarks, locations.
+
+
+with 12 enteries 
+}
+*/
+
+
+
+Create table student( name varchar(10), age INT, rollno INT, class INT, div Varchar(1) , gender varchar(1),
+engmarks INT, scimarks INT, hindimarks INT , marathimarks INT, mathmarks INT, location Varchar(10));   
+
+
+
+Insert into student values 
+('Pooja', 20, 32, 10, 'A', 'F', 50, 80,60,70,40,'goregoan'),
+('sid', 10, 41, 11, 'A', 'M', 50, 90,30,60,40,'dadar'),
+('Divya', 22, 11, 10, 'C', 'F', 40, 70,60,80,40,'borivali'),
+('rohan', 25, 16, 12, 'A', 'M', 50, 60,20,80,10,'khar'),
+('rashmi', 28, 31, 13, 'A', 'F', 50, 80,60,70,40,'santacruz'),
+('Yuvi', 25, 25, 10, 'A', 'M', 90, 80,90,80,90,'thane'),
+('Namrata', 20, 35, 10, 'D', 'F', 50, 80,60,70,40,'andheri'),
+('Viraj', 20, 37, 12, 'E', 'M', 50, 80,0,70,0,'mulund'),
+('lakshmy', 20, 39, 10, 'D', 'F', 50, 80,60,70,40,'virar'),
+('Natasha', 20, 31, 10, 'D', 'F', 50, 80,60,70,40,'bandra');
+
+
+
+SELECT * FROM student;
+
+Select * from student where gender = 'M';
+
+Select * from student where gender = 'M' and scimarks > 70;
+
+Select * from student where gender = 'f' and scimarks > 70;
+
+Select * from student where gender = 'M' or scimarks > 70;
+
+|Select * from student where hindimarks between 70 and 100;
+
+
+----------------------------------------------------------------------
+
+------------ Alter = to add extra columns in the table
+
+ALTER TABLE STUDENT ADD DEMO INT, ADDRESSS VARCHAR(20);
+
+
+----- UPDATE
+
+-- FOR ALL AT ONCE UPDATE 
+
+UPDATE student SET DEMO = 23, ADDRESSS = 'KJSDF';
+
+-- FOR PARTICULAR WITH COONDITION
+
+UPDATE student SET DEMO = 123456, ADDRESSS = 'ABHI' WHERE rollno = 31;
+
+--- ALTER - ALSO USE FOR DELETE
+
+ALTER TABLE STUDENT DROP COLUMN DEMO,ADDRESSS;
+
+----------------------------- DELETE - DROP - TRUNCATE ----------------------------------
+
+--- DELETE PARTICULAR USING "DELETE"
+
+DELETE FROM student WHERE rollno = 31;
+
+--- TRUNCATE 
+
+TRUNCATE TABLE STUDENT
+
+--- DROP 
+
+DROP TABLE student;
+
+
+------ BETWEEN
+
+SELECT * FROM Student WHERE ROLLNO BETWEEN 30 AND 40;
+
+
+--- DISTINCT
+
+SELECT DISTINCT(AGE) FROM STUDENT;
+
+--- ORDER BY 
+
+-- ASC
+Select * from student ORDER BY AGE;
+
+Select * from student ORDER BY AGE ASC;
+
+-- DESC
+
+Select * from student ORDER BY AGE DESC;
+
+Select * from student ORDER BY NAME DESC;
+
+--- IN | NOT IN
+
+-- IN
+
+Select * from student WHERE LOCATION IN ('KHAR', 'DADAR', 'GOREGOAN');
+
+-- NOT IN
+
+Select * from student WHERE LOCATION NOT IN ('KHAR', 'DADAR', 'GOREGOAN');
+
+-------------------------- LIKE 
+
+Select * from student WHERE NAME LIKE 'N%';
+
+Select * from student WHERE NAME LIKE '%N';
+
+Select * from student WHERE NAME LIKE '%AS%';
+
+Select * from student WHERE NAME LIKE '_A%';
+
+Select * from student WHERE NAME LIKE '%H__';
+ 
+
+
+ --------------------- AGGREGATE FUCNTIONS-----------------------
+
+ SELECT COUNT(SALARY) AS TOTAL_EMPLOYEES FROM Employees;
+
+ SELECT COUNT(*) AS TOTAL_EMPLOYEES FROM Employees;
+
+ SELECT COUNT(1) AS TOTAL_EMPLOYEES FROM Employees;
+ 
+ SELECT SUM(SALARY) AS TOTAL_SALARY FROM Employees; 
+
+ SELECT MIN(SALARY) AS MIN_SALARY FROM Employees; 
+
+ SELECT MAX(SALARY) AS MAX_SALARY FROM Employees;
+ 
+ SELECT AVG(SALARY) AS AVG_SALARY FROM Employees; 
+
+ ------------------- GROUP BY AND HAVING
+
+ SELECT DEPARTMENT, SUM(SALARY) AS TOTAL_SALARY FROM Employees GROUP BY Department ; 
+
+ SELECT CITY, SUM(SALARY) AS TOTAL_SALARY FROM Employees GROUP BY  City;
+
+ SELECT DEPARTMENT, SUM(SALARY) AS TOTAL_SALARY FROM Employees GROUP BY Department HAVING SUM(SALARY) > 150000; 
+
+ SELECT DEPARTMENT, SUM(SALARY) AS TOTAL_SALARY FROM Employees WHERE Salary > 62000 GROUP BY Department; 
+
+ SELECT DEPARTMENT, SUM(SALARY) AS TOTAL_SALARY FROM Employees GROUP BY Department ; 
+
+
+
+
+
+Select * from Employees;
+
