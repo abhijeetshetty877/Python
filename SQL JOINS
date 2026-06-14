@@ -1,0 +1,134 @@
+CREATE TABLE Personal_Details (
+    customer_id INT PRIMARY KEY,
+    customer_name VARCHAR(50),
+    city VARCHAR(50),
+    referred_by INT
+);
+
+CREATE TABLE Sales (
+    sale_id INT PRIMARY KEY,
+    customer_id INT,
+    product_name VARCHAR(50),
+    sale_amount DECIMAL(10,2)
+);
+
+CREATE TABLE Finance (
+    finance_id INT PRIMARY KEY,
+    customer_id INT,
+    loan_amount DECIMAL(10,2),
+    credit_score INT
+);
+
+INSERT INTO Personal_Details VALUES
+(101, 'Rahul', 'Mumbai', NULL),
+(102, 'Priya', 'Pune', 101),
+(103, 'Amit', 'Delhi', 101),
+(104, 'Sneha', 'Bangalore', 102),
+(105, 'Neha', 'Chennai', 103);
+
+INSERT INTO Sales VALUES
+(1, 101, 'Laptop', 55000),
+(2, 102, 'Mobile', 25000),
+(3, 103, 'TV', 40000),
+(4, 105, 'Refrigerator', 35000);
+
+INSERT INTO Finance VALUES
+(11, 101, 300000, 780),
+(12, 102, 500000, 750),
+(13, 104, 250000, 720);
+
+
+-------------------------------------------------------------------
+
+----------- self joins - A SELF JOIN joins a table with itself.
+
+-- In Personal_Details, each customer may have a referral customer.
+
+SELECT
+    c.customer_name AS Customer,
+    r.customer_name AS Referred_By
+FROM Personal_Details c
+LEFT JOIN Personal_Details r
+    ON c.referred_by = r.customer_id;
+
+
+	select * from Personal_Details
+
+
+
+--- CROSS JOIN -- A CROSS JOIN returns every possible combination of rows from both tables.
+
+CREATE TABLE Customers (
+    customer_id INT,
+    customer_name VARCHAR(50)
+);
+
+INSERT INTO Customers VALUES
+(101,'Rahul'),
+(102,'Priya'),
+(103,'Amit');
+
+
+CREATE TABLE Products1 (
+    product_id INT,
+    product_name VARCHAR(50)
+);
+
+INSERT INTO Products1 VALUES
+(1,'Laptop'),
+(2,'Mobile'),
+(3,'TV');
+
+SELECT
+    c.customer_name,
+    p.product_name
+FROM Customers c
+CROSS JOIN Products1 p;
+
+
+---------------------------- multiple joins
+
+-- Customers who have both Sales and Finance records.
+select * from Personal_Details;
+select * from Finance;
+select * from Sales;
+
+
+
+SELECT
+    p.customer_id,
+    p.customer_name,
+    s.product_name,
+    s.sale_amount,
+    f.loan_amount
+FROM Personal_Details p
+INNER JOIN Sales s
+    ON p.customer_id = s.customer_id
+INNER JOIN Finance f
+    ON p.customer_id = f.customer_id;
+
+
+--- Show all customers even if they don't have sales or finance data.
+
+SELECT
+    p.customer_id,
+    p.customer_name,
+    s.product_name,
+    f.loan_amount
+FROM Personal_Details p
+LEFT JOIN Sales s
+    ON p.customer_id = s.customer_id
+LEFT JOIN Finance f
+    ON p.customer_id = f.customer_id;
+
+--- Show all sales records even if customer details are missing.
+
+SELECT
+    p.customer_name,
+    s.product_name,
+    s.sale_amount
+FROM Sales s
+left JOIN Personal_Details p
+    ON p.customer_id = s.customer_id;
+
+--------------------------------------------------------------------------------
